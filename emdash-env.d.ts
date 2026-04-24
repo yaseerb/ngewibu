@@ -37,6 +37,18 @@ export interface Post {
   bylines?: ContentBylineCredit[];
 }
 
+export interface Anime {
+  id: string;
+  slug: string | null;
+  status: string;
+  title: string;
+  synopsis?: PortableTextBlock[];
+  createdAt: Date;
+  updatedAt: Date;
+  publishedAt: Date | null;
+  bylines?: ContentBylineCredit[];
+}
+
 declare module "emdash" {
   interface EmDashCollections {
     pages: Page;
